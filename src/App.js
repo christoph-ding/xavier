@@ -19,12 +19,14 @@ const quoteThree = `
 "Authentic skateboard enamel pin bespoke echo park kogi neutra artisan." - Earl
 `
 
+const legalese = `
+Messenger bag taiyaki selvage vape austin. Everyday carry brooklyn skateboard occupy street art.
+`
+
 // these will be moved out
 // all stateless ... for now ?
 
 const Header = (props) => {
-  console.log('header props: ', props)
-  // props: main text, subtext
   return (
     <div>
       <h1> {props.main} </h1>
@@ -34,8 +36,6 @@ const Header = (props) => {
 } 
 
 const Logo = (props) => {
-  console.log('logo props: ', props)
-  // props: path to logo image
   return (
     <div>
       <img src={props.logo} alt="logo" className="App-logo"/>
@@ -44,8 +44,6 @@ const Logo = (props) => {
 }
 
 const MiddleSplash = (props) => {
-  console.log('middle splash props: ', props)
-  // props: path to splash image
   return (
     <div className="Middle-splash">
     </div>
@@ -53,8 +51,6 @@ const MiddleSplash = (props) => {
 }
 
 const Description = (props) => {
-  console.log('description props: ', props)
-  // props: description, style
   return (
     <div>
       <p> {props.text} </p>
@@ -63,8 +59,6 @@ const Description = (props) => {
 }
 
 const Quotes = (props) => {
-  console.log('quotes props: ', props)
-  // props: description, style
   return (
     <div>
       <p> {props.quote} </p>
@@ -72,22 +66,30 @@ const Quotes = (props) => {
   )
 }
 
+function testSubmit (event) {
+  event.preventDefault();
+  console.log("submitting ... ")
+  // console.log('event: ', event.target.name.value)
+}
+
 const Contact = (props) => {
-  console.log('contact props: ', props)
-  // props: description, style
   return (
     <div>
-      Contact
+      <form autoComplete="off" onSubmit={testSubmit}>
+        Name: <br></br>
+        <input type="text" name="name" /> <br></br>
+        Email: <br></br>
+        <input type="text" name="email" /> <br></br>
+        <input type="submit" value="Submit" />
+      </form>
     </div>
   )
 }
 
 const Footer = (props) => {
-  console.log('footer props: ', props)
-  // props: description
   return (
     <div>
-      Footer
+      <p> {props.legalese} </p>
     </div>
   )
 }
@@ -105,25 +107,10 @@ class App extends Component {
         <Quotes quote={quoteTwo}/>
         <Quotes quote={quoteThree}/>
         <Contact />
-        <Footer />
+        <Footer legalese={legalese}/>
       </div>
     );
   }
 }
 
 export default App;
-
-// <header className="App-header">
-//   <img src={logo} className="App-logo" alt="logo" />
-//   <p>
-//     Edit <code>src/App.js</code> and save to reload.
-//   </p>
-//   <a
-//     className="App-link"
-//     href="https://reactjs.org"
-//     target="_blank"
-//     rel="noopener noreferrer"
-//   >
-//     Learn React
-//   </a>
-// </header>
