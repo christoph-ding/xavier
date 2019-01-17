@@ -3,39 +3,69 @@ import logo from './logo.svg';
 import './App.css';
 
 // these will be moved out
-class Header extends Component {
-  // stateless
+// all stateless ... for now ?
+
+const Header = (props) => {
   // props: text
-}
+  return (
+    <div>
+      Header
+    </div>
+  )
+} 
 
-class Logo extends Component {
-  // stateless
+const Logo = (props) => {
   // props: path to logo image
+  return (
+    <div>
+      Logo
+    </div>
+  )
 }
 
-class MiddleSplash extends Component {
-  // stateless
+const MiddleSplash = (props) => {
   // props: path to splash image
+  return (
+    <div>
+      MiddleSplash
+    </div>
+  ) 
 }
 
-class Description extends Component {
-  // stateless
+const Description = (props) => {
   // props: description, style
+  return (
+    <div>
+      Description
+    </div>
+  )
 }
 
-class Quotes extends Component {
-  // stateless
+const Quotes = (props) => {
   // props: description, style
+  return (
+    <div>
+      Quotes
+    </div>
+  )
 }
 
-class Contact extends Component {
-  // stateless
+const Contact = (props) => {
   // props: description, style
+  return (
+    <div>
+      Contact
+    </div>
+  )
 }
 
-class Footer extends Component {
-  // stateless
+const Footer = (props) => {
   // props: description
+  return (
+    <div>
+      Footer
+    </div>
+  )
 }
 
 class App extends Component {
