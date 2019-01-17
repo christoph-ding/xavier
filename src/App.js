@@ -2,32 +2,40 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+// these will be moved out
 class Header extends Component {
-
+  // stateless
+  // props: text
 }
 
 class Logo extends Component {
-
+  // stateless
+  // props: path to logo image
 }
 
 class MiddleSplash extends Component {
-  
+  // stateless
+  // props: path to splash image
 }
 
 class Description extends Component {
-
+  // stateless
+  // props: description, style
 }
 
 class Quotes extends Component {
-
+  // stateless
+  // props: description, style
 }
 
 class Contact extends Component {
-
+  // stateless
+  // props: description, style
 }
 
 class Footer extends Component {
-
+  // stateless
+  // props: description
 }
 
 class App extends Component {
