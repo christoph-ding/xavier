@@ -30,3 +30,8 @@
     transform: rotate(360deg);
   }
 }
+
+.Middle-splash {
+  height: 40vmin;
+  background-image: url("https://3c1703fe8d.site.internapcdn.net/newman/gfx/news/2018/europeslostf.jpg");
+}
