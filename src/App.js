@@ -53,10 +53,14 @@ const Quotes = (props) => {
   )
 }
 
+
+
 function testSubmit (event) {
   event.preventDefault();
-  console.log("submitting ... ")
-  // console.log('event: ', event.target.name.value)
+  let name = event.target.name.value
+  let email = event.target.email.value
+  let msg = `Hi ${name}, we will contact you at ${email}`
+  alert(msg)
 }
 
 const Contact = (props) => {
