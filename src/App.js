@@ -38,7 +38,8 @@ const Header = (props) => {
 
 const Description = (props) => {
   return (
-    <div>
+    <div className="Description-container">
+      <h5> About Xaxier </h5>
       <p> {props.text} </p>
     </div>
   )
@@ -46,7 +47,7 @@ const Description = (props) => {
 
 const Quotes = (props) => {
   return (
-    <div>
+    <div className="Quote">
       <p> {props.quote} </p>
     </div>
   )
@@ -60,7 +61,7 @@ function testSubmit (event) {
 
 const Contact = (props) => {
   return (
-    <div>
+    <div className="Form-container">
       <form autoComplete="off" onSubmit={testSubmit}>
         Name: <br></br>
         <input type="text" name="name" /> <br></br>
@@ -74,7 +75,7 @@ const Contact = (props) => {
 
 const Footer = (props) => {
   return (
-    <div>
+    <div className="Footer-container">
       <p> {props.legalese} </p>
     </div>
   )
@@ -88,9 +89,12 @@ class App extends Component {
         <Header main="Xavier" sub="the online quoting system that works for you"/>
         <div className="Body">
           <Description text={descriptionLorem}/>
-          <Quotes quote={quoteOne}/>
-          <Quotes quote={quoteTwo}/>
-          <Quotes quote={quoteThree}/>
+          <div className="Quotes-container">
+            <h5> Past Testimonials </h5>
+            <Quotes quote={quoteOne}/>
+            <Quotes quote={quoteTwo}/>
+            <Quotes quote={quoteThree}/>
+          </div>
           <Contact />
         </div>
         <Footer legalese={legalese}/>

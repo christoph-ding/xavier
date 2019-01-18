@@ -27,10 +27,9 @@ time, mark, audio, video {
 .Header {
   background-color: #249EF9;
   margin: 0;  
-  padding-left: 5vh;
-  padding-right: 5vh;
-  padding-top: 1vh;
-  padding-bottom: 1vh;
+  padding-left: 3vh;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
   height: 10vh;
 }
 
@@ -48,6 +47,33 @@ time, mark, audio, video {
   width: 60%;
 }
 
-.App-link {
-  color: #61dafb;
+.Body {
+  padding-left: 3vh;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}x
+
+.Description-container {
+  /*margin-bottom: 5vh;*/
+}
+
+.Quotes-container {
+  margin-top: 3vh;
+}
+
+.Quote {
+  margin-top: 2vh;
+  margin-bottom: 2vh; 
+}
+
+.Form-container {
+  margin-top: 3vh; 
+}
+
+.Footer-container {
+  background-color: white;
+  position:absolute;
+  bottom:0;
+  width: 100%;
+  height: 5vh;
 }
