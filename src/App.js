@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 // move this out
@@ -28,27 +27,14 @@ Messenger bag taiyaki selvage vape austin. Everyday carry brooklyn skateboard oc
 
 const Header = (props) => {
   return (
-    <div>
-      <h1> {props.main} </h1>
-      <h5> {props.sub} </h5>
+    <div className="Header">
+      <div className="Title-Container">
+        <h1> {props.main} </h1>
+        <h5> {props.sub} </h5>
+      </div>
     </div>
   )
 } 
-
-const Logo = (props) => {
-  return (
-    <div>
-      <img src={props.logo} alt="logo" className="App-logo"/>
-    </div>
-  )
-}
-
-const MiddleSplash = (props) => {
-  return (
-    <div className="Middle-splash">
-    </div>
-  ) 
-}
 
 const Description = (props) => {
   return (
@@ -98,15 +84,15 @@ class App extends Component {
   // TODO - remove the text literal here
   render() {
     return (
-      <div className="App">
+      <div className="App">      
         <Header main="Xavier" sub="the online quoting system that works for you"/>
-        <Logo logo={logo}/>
-        <MiddleSplash />
-        <Description text={descriptionLorem}/>
-        <Quotes quote={quoteOne}/>
-        <Quotes quote={quoteTwo}/>
-        <Quotes quote={quoteThree}/>
-        <Contact />
+        <div className="Body">
+          <Description text={descriptionLorem}/>
+          <Quotes quote={quoteOne}/>
+          <Quotes quote={quoteTwo}/>
+          <Quotes quote={quoteThree}/>
+          <Contact />
+        </div>
         <Footer legalese={legalese}/>
       </div>
     );

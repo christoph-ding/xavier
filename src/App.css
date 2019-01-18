@@ -1,37 +1,53 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
 .App {
-  text-align: center;
+  height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.Header {
+  background-color: #249EF9;
+  margin: 0;  
+  padding-left: 5vh;
+  padding-right: 5vh;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  height: 10vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Header h1 {
+  font-size: 6vh;
+}
+
+.Header h5 {
+  font-size: 2vh;
+}
+
+.Title-Container {
+  float: left;
+  height: 10vh;
+  width: 60%;
 }
 
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.Middle-splash {
-  height: 40vmin;
-  background-image: url("https://3c1703fe8d.site.internapcdn.net/newman/gfx/news/2018/europeslostf.jpg");
 }
