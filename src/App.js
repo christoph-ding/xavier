@@ -53,8 +53,6 @@ const Quotes = (props) => {
   )
 }
 
-
-
 function testSubmit (event) {
   event.preventDefault();
   let name = event.target.name.value
@@ -66,6 +64,7 @@ function testSubmit (event) {
 const Contact = (props) => {
   return (
     <div className="Form-container">
+      <h5> Contact Us </h5>
       <form autoComplete="off" onSubmit={testSubmit}>
         Name: <br></br>
         <input type="text" name="name" /> <br></br>
@@ -75,6 +74,31 @@ const Contact = (props) => {
       </form>
     </div>
   )
+}
+
+class JetForm extends Component {
+  render() {
+    return (
+      <div className="Form-container">
+        <h5> New Jets </h5>
+        <form autoComplete="off" onSubmit={testSubmit}>
+          Owner Name: <br></br>
+          <input type="text" name="name" /> <br></br>
+          Jet Model: <br></br>
+          <input type="text" name="model" /> <br></br>
+          Jet Seat Capacity: <br></br>
+          <input type="text" name="seatCapacity" /> <br></br>
+          Manufacturing Date: <br></br>
+          <input type="text" name="manufacturingDate" /> <br></br>
+          Purchase Price: <br></br>
+          <input type="text" name="price" /> <br></br>
+          Broker Email <br></br>
+          <input type="text" name="email" /> <br></br>
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+    )
+  }
 }
 
 const Footer = (props) => {
@@ -87,6 +111,10 @@ const Footer = (props) => {
 
 class App extends Component {
   // TODO - remove the text literal here
+
+
+
+
   render() {
     return (
       <div className="App">      
@@ -100,6 +128,7 @@ class App extends Component {
             <Quotes quote={quoteThree}/>
           </div>
           <Contact />
+          <JetForm />
         </div>
         <Footer legalese={legalese}/>
       </div>
